@@ -20,33 +20,23 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'devise'
+gem 'foundation-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
+  gem 'capybara'
+  gem 'coveralls', require: false
+  gem 'factory_girl'
+  gem 'launchy'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+  gem 'rspec-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'shoulda-matchers', require: false
+  gem 'valid_attribute'
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
 end
-
-
-gem 'rspec-rails', group: [:development, :test]
-gem 'capybara', group: [:development, :test]
-gem 'launchy', group: [:development, :test]
-gem 'factory_girl', group: [:development, :test]
-gem 'valid_attribute', group: [:development, :test]
-gem 'shoulda-matchers', group: [:development, :test], require: false
-gem 'devise'
-gem 'foundation-rails'
