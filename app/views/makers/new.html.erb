@@ -1,1 +1,22 @@
-<%= render 'makerform' %>
+<div class="large-12 columns">
+<form>
+  <fieldset>
+    <legend>Create New Manufacturer</legend>
+
+    <%= form_for @maker do |f| %>
+      <label>Manufacturer Name
+        <%= f.text_field :name, autofocus: true, placeholder: "e.g. Mazda" %>
+      </label>
+
+      <label>Manufacturer Country
+        <%= f.text_field :country, placeholder: "e.g. Japan" %>
+      </label>
+
+      <%= f.submit "Create Manufacturer", class: "button secondary" %>
+
+    <% end %>
+  </fieldset>
+</form>
+
+<%= link_to 'Back', makers_path %>
+</div>
